@@ -22,6 +22,7 @@ import android.compat.annotation.UnsupportedAppUsage;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
+import android.os.SystemProperties;
 import android.util.Slog;
 import android.util.proto.ProtoOutputStream;
 
@@ -322,8 +323,7 @@ public class PowerProfile {
     }
 
     private void readPowerValuesFromXml(Context context, boolean forTest) {
-        final int id = forTest ? com.android.internal.R.xml.power_profile_test :
-                com.android.internal.R.xml.power_profile;
+        int id = getPowerProfileResId(context, forTest);
         final Resources resources = context.getResources();
         XmlResourceParser parser = resources.getXml(id);
         boolean parsingArray = false;
