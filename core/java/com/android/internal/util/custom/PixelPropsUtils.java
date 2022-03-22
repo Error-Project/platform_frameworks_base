@@ -49,6 +49,7 @@ public class PixelPropsUtils {
     private static final String[] extraPackagesToChange = {
             "com.android.chrome",
             "com.android.vending",
+            "com.netflix.mediaclient",
             "com.breel.wallpapers20"
     };
 
@@ -62,14 +63,13 @@ public class PixelPropsUtils {
         propsToKeep.put("com.google.android.settings.intelligence",
                 new ArrayList<>(Collections.singletonList("FINGERPRINT")));
         propsToKeep.put("com.google.android.GoogleCamera", allProps);
-        propsToKeep.put("com.google.android.dialer", allProps);
         propsToChangePixel6 = new HashMap<>();
         propsToChangePixel6.put("BRAND", "google");
         propsToChangePixel6.put("MANUFACTURER", "Google");
         propsToChangePixel6.put("DEVICE", "raven");
         propsToChangePixel6.put("PRODUCT", "raven");
         propsToChangePixel6.put("MODEL", "Pixel 6 Pro");
-        propsToChangePixel6.put("FINGERPRINT", "google/raven/raven:12/S3B1.220218.004/8242181:user/release-keys");
+        propsToChangePixel6.put("FINGERPRINT", "google/raven/raven:12/SP2A.220305.013.A3/8229987:user/release-keys");
         propsToChangePixel5 = new HashMap<>();
         propsToChangePixel5.put("BRAND", "google");
         propsToChangePixel5.put("MANUFACTURER", "Google");
